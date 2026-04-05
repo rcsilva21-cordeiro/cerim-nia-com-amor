@@ -15,7 +15,7 @@ const testimonials = [
   {
     quote: "Uma celebrante que entende que o amor vai além de qualquer rótulo. Nossa cerimônia budista foi perfeita.",
     names: "Rafael & Thiago",
-    detail: "Cerimônia espiritual",
+    detail: "Cerimônia na fazenda",
   },
 ];
 
