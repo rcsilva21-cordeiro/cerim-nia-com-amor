@@ -14,14 +14,24 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img
-              src={aboutImage}
-              alt="Detalhes românticos de casamento"
-              className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"
-              loading="lazy"
-              width={800}
-              height={1000}
-            />
+            <div className="relative">
+              <img
+                src={aboutImage}
+                alt="Detalhes românticos de casamento"
+                className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"
+                loading="lazy"
+                width={800}
+                height={1000}
+              />
+              <div className="absolute -bottom-8 -right-8 w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden shadow-xl border-4 border-background">
+                <img
+                  src={celebrantImage}
+                  alt="Celebrante LoveWedding"
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
