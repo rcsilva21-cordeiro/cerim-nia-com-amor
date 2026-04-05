@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import aboutImage from "@/assets/about-wedding.jpg";
-import celebrantImage from "@/assets/celebrant.jpg";
 import { Heart } from "lucide-react";
 
 const AboutSection = () => {
