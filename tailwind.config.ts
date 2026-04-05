@@ -12,8 +12,23 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      display: ['"Playfair Display"', 'serif'],
+      body: ['Lato', 'sans-serif'],
+    },
     extend: {
       colors: {
+        rose: {
+          soft: "hsl(var(--rose-soft))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+        },
+        cream: {
+          DEFAULT: "hsl(var(--cream))",
+          dark: "hsl(var(--cream-dark))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
