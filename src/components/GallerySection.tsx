@@ -2,30 +2,18 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, MapPin, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
-import galleryLake from "@/assets/gallery-lake.jpg";
-import galleryLake2 from "@/assets/gallery-lake-2.jpg";
-import galleryLake3 from "@/assets/gallery-lake-3.jpg";
-import galleryLake4 from "@/assets/gallery-lake-4.jpg";
-import galleryBeach from "@/assets/gallery-beach.jpg";
-import galleryBeach2 from "@/assets/gallery-beach-2.jpg";
-import galleryBeach3 from "@/assets/gallery-beach-3.jpg";
-import galleryBeach4 from "@/assets/gallery-beach-4.jpg";
-import galleryFarm from "@/assets/gallery-farm.jpg";
-import galleryFarm2 from "@/assets/gallery-farm-2.jpg";
-import galleryFarm3 from "@/assets/gallery-farm-3.jpg";
-import galleryFarm4 from "@/assets/gallery-farm-4.jpg";
-import galleryIndoor from "@/assets/gallery-indoor.jpg";
-import galleryIndoor2 from "@/assets/gallery-indoor-2.jpg";
-import galleryIndoor3 from "@/assets/gallery-indoor-3.jpg";
-import galleryIndoor4 from "@/assets/gallery-indoor-4.jpg";
-
 const weddings = [
   {
-    cover: galleryLake,
-    photos: [galleryLake, galleryLake2, galleryLake3, galleryLake4],
-    title: "Cerimônia no Lago",
-    location: "Lago sereno com montanhas",
-    description: "Uma cerimônia inesquecível diante de um lago cristalino, com as montanhas como testemunhas do amor.",
+    cover: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1024&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1519741497674-611481863552?w=1024&q=80",
+      "https://images.unsplash.com/photo-1464699908537-0954e50791ee?w=1024&q=80",
+      "https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=1024&q=80",
+      "https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=1024&q=80",
+    ],
+    title: "Cerimônia no Jardim",
+    location: "Jardim com arco de flores",
+    description: "Sob a sombra gentil das árvores e o perfume das flores, o amor floresceu em uma cerimônia que parecia um sonho pintado pela natureza.",
     testimonial: {
       quote: "Ela conseguiu traduzir em palavras tudo o que sentíamos. Os convidados não pararam de chorar de emoção!",
       names: "Carlos & Marina",
@@ -33,11 +21,16 @@ const weddings = [
     },
   },
   {
-    cover: galleryBeach,
-    photos: [galleryBeach, galleryBeach2, galleryBeach3, galleryBeach4],
+    cover: "https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?w=1024&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?w=1024&q=80",
+      "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1024&q=80",
+      "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1024&q=80",
+      "https://images.unsplash.com/photo-1510076857177-7470076d4098?w=1024&q=80",
+    ],
     title: "Casamento na Praia",
     location: "Praia ao pôr do sol",
-    description: "Pés na areia, brisa do mar e o pôr do sol como cenário para uma declaração de amor eterna.",
+    description: "Pés na areia, brisa do mar e o pôr do sol dourado como cenário para uma declaração de amor que ecoou com as ondas do oceano.",
     testimonial: {
       quote: "Foi a cerimônia mais linda que já presenciamos. Cada palavra tocou nosso coração de uma forma que nunca vamos esquecer.",
       names: "Ana & Beatriz",
@@ -45,11 +38,16 @@ const weddings = [
     },
   },
   {
-    cover: galleryFarm,
-    photos: [galleryFarm, galleryFarm2, galleryFarm3, galleryFarm4],
-    title: "União na Fazenda",
-    location: "Fazenda com campos verdes",
-    description: "No coração do campo, entre flores silvestres e colinas douradas, uma celebração de amor autêntico.",
+    cover: "https://images.unsplash.com/photo-1510070009289-b5bc29de0536?w=1024&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1510070009289-b5bc29de0536?w=1024&q=80",
+      "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1024&q=80",
+      "https://images.unsplash.com/photo-1529636798458-92182e662485?w=1024&q=80",
+      "https://images.unsplash.com/photo-1472653431158-6364773b2a56?w=1024&q=80",
+    ],
+    title: "Celebração no Campo",
+    location: "Fazenda com vista para o campo",
+    description: "No coração do campo, entre colinas douradas e céu infinito, uma celebração rústica e cheia de alma que uniu dois corações apaixonados.",
     testimonial: {
       quote: "Uma celebrante que entende que o amor vai além de qualquer rótulo. Nossa cerimônia espiritual foi perfeita.",
       names: "Rafael & Thiago",
@@ -57,11 +55,16 @@ const weddings = [
     },
   },
   {
-    cover: galleryIndoor,
-    photos: [galleryIndoor, galleryIndoor2, galleryIndoor3, galleryIndoor4],
-    title: "Celebração em Ambiente Fechado",
-    location: "Salão elegante com flores e velas",
-    description: "Lustres, velas e arranjos florais exuberantes criam um cenário íntimo e sofisticado.",
+    cover: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1024&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1024&q=80",
+      "https://images.unsplash.com/photo-1478146059778-26028b07395a?w=1024&q=80",
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1024&q=80",
+      "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=1024&q=80",
+    ],
+    title: "Cerimônia em Salão",
+    location: "Salão decorado com flores e velas",
+    description: "Lustres cintilantes, velas que dançam suavemente e arranjos florais exuberantes criam um cenário íntimo, sofisticado e repleto de magia.",
     testimonial: null,
   },
 ];
@@ -183,7 +186,6 @@ const GallerySection = () => {
                   alt={`${weddings[selectedWedding].title} - foto ${currentPhoto + 1}`}
                   className="w-full rounded-xl shadow-2xl aspect-[4/3] object-cover"
                 />
-                {/* Nav buttons */}
                 <button
                   onClick={prevPhoto}
                   className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors"
@@ -196,7 +198,6 @@ const GallerySection = () => {
                 >
                   <ChevronRight size={24} />
                 </button>
-                {/* Dots */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                   {weddings[selectedWedding].photos.map((_, idx) => (
                     <button
