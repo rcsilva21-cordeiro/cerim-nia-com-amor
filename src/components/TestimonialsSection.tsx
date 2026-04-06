@@ -10,6 +10,12 @@ type Testimonial = {
   quote: string;
 };
 
+const FALLBACK_TESTIMONIALS: Testimonial[] = [
+  { id: "ft-1", names: "Camila & Fernanda", detail: "Cerimônia na fazenda", quote: "Ela trouxe uma leveza e um carinho que fizeram todos se emocionar. Foi exatamente o que sonhamos." },
+  { id: "ft-2", names: "Lucas & Rafael", detail: "Casamento na praia", quote: "Cada palavra tocou nosso coração. Os convidados não pararam de chorar de emoção!" },
+  { id: "ft-3", names: "Daniel & Priya", detail: "Cerimônia espiritual", quote: "Uma celebrante que entende que o amor vai além de qualquer rótulo. Nossa cerimônia espiritual foi perfeita." },
+];
+
 const TestimonialsSection = () => {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [loading, setLoading] = useState(true);
@@ -21,14 +27,17 @@ const TestimonialsSection = () => {
         .select("id, names, detail, quote")
         .eq("is_visible", true)
         .order("created_at", { ascending: false });
-      if (data) setTestimonials(data);
+      if (data && data.length > 0) {
+        setTestimonials(data);
+      } else {
+        setTestimonials(FALLBACK_TESTIMONIALS);
+      }
       setLoading(false);
     };
     fetch();
   }, []);
 
   if (loading) return null;
-  if (testimonials.length === 0) return null;
 
   return (
     <section id="depoimentos" className="py-24 md:py-32 bg-background">

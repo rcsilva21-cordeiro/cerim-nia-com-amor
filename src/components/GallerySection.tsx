@@ -16,6 +16,65 @@ type Wedding = {
   testimonial: Testimonial | null;
 };
 
+const FALLBACK_WEDDINGS: Wedding[] = [
+  {
+    id: "fallback-1",
+    title: "União na Fazenda",
+    location: "Fazenda com vista para o campo",
+    description: "No coração do interior, entre campos verdes e o perfume de flores silvestres, duas almas se uniram em uma celebração cheia de emoção e autenticidade.",
+    cover_url: "https://images.unsplash.com/photo-1510076857177-7470076d4098?w=1024&q=80",
+    order_index: 1,
+    photos: [
+      { id: "f1-1", photo_url: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1024&q=80", order_index: 1 },
+      { id: "f1-2", photo_url: "https://images.unsplash.com/photo-1495609711838-8a23b65f3e51?w=1024&q=80", order_index: 2 },
+      { id: "f1-3", photo_url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1024&q=80", order_index: 3 },
+    ],
+    testimonial: { id: "ft-1", names: "Camila & Fernanda", detail: "Cerimônia na fazenda", quote: "Ela trouxe uma leveza e um carinho que fizeram todos se emocionar. Foi exatamente o que sonhamos." },
+  },
+  {
+    id: "fallback-2",
+    title: "Casamento na Praia",
+    location: "Praia ao pôr do sol",
+    description: "Com os pés na areia e o som das ondas como testemunha, o amor ganhou a eternidade em um pôr do sol inesquecível.",
+    cover_url: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1024&q=80",
+    order_index: 2,
+    photos: [
+      { id: "f2-1", photo_url: "https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?w=1024&q=80", order_index: 1 },
+      { id: "f2-2", photo_url: "https://images.unsplash.com/photo-1472653816316-3ad6f10a6592?w=1024&q=80", order_index: 2 },
+      { id: "f2-3", photo_url: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=1024&q=80", order_index: 3 },
+    ],
+    testimonial: { id: "ft-2", names: "Lucas & Rafael", detail: "Casamento na praia", quote: "Cada palavra tocou nosso coração. Os convidados não pararam de chorar de emoção!" },
+  },
+  {
+    id: "fallback-3",
+    title: "Cerimônia no Lago",
+    location: "Lago sereno com montanhas",
+    description: "Diante da serenidade do lago e da beleza da natureza, uma cerimônia espiritual celebrou a conexão profunda entre dois corações.",
+    cover_url: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1024&q=80",
+    order_index: 3,
+    photos: [
+      { id: "f3-1", photo_url: "https://images.unsplash.com/photo-1478146059778-26028b07395a?w=1024&q=80", order_index: 1 },
+      { id: "f3-2", photo_url: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1024&q=80", order_index: 2 },
+      { id: "f3-3", photo_url: "https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?w=1024&q=80", order_index: 3 },
+    ],
+    testimonial: { id: "ft-3", names: "Daniel & Priya", detail: "Cerimônia espiritual", quote: "Uma celebrante que entende que o amor vai além de qualquer rótulo. Nossa cerimônia espiritual foi perfeita." },
+  },
+  {
+    id: "fallback-4",
+    title: "Celebração em Salão",
+    location: "Salão decorado com flores e velas",
+    description: "Lustres, velas e arranjos florais criaram o cenário perfeito para uma celebração elegante e cheia de amor.",
+    cover_url: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1024&q=80",
+    order_index: 4,
+    photos: [
+      { id: "f4-1", photo_url: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1024&q=80", order_index: 1 },
+      { id: "f4-2", photo_url: "https://images.unsplash.com/photo-1470290378698-263fa7ca60ab?w=1024&q=80", order_index: 2 },
+      { id: "f4-3", photo_url: "https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=1024&q=80", order_index: 3 },
+    ],
+    testimonial: null,
+  },
+];
+
 const GallerySection = () => {
   const [weddings, setWeddings] = useState<Wedding[]>([]);
   const [loading, setLoading] = useState(true);
@@ -30,6 +89,7 @@ const GallerySection = () => {
         .order("order_index", { ascending: true });
 
       if (!weddingsData || weddingsData.length === 0) {
+        setWeddings(FALLBACK_WEDDINGS);
         setLoading(false);
         return;
       }
