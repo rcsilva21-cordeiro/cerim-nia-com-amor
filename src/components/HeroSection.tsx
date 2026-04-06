@@ -23,7 +23,7 @@ const HeroSection = () => {
         >
           <Heart className="mx-auto mb-6 text-primary-foreground" size={40} strokeWidth={1} />
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-semibold text-primary-foreground mb-6 tracking-tight">
-            LoveWedding
+            Cordeiro Celebrações
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/90 font-body font-light max-w-2xl mx-auto mb-10 leading-relaxed">
             Celebrando o amor em todas as suas formas — cerimônias únicas, 

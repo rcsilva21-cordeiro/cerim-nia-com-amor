@@ -10,7 +10,7 @@ const Footer = () => {
           Celebrando o amor em todas as suas formas.
         </p>
         <p className="text-xs mt-6 text-primary-foreground/40">
-          © {new Date().getFullYear()} LoveWedding. Todos os direitos reservados.
+          © {new Date().getFullYear()} Cordeiro Celebrações. Todos os direitos reservados.
         </p>
       </div>
     </footer>

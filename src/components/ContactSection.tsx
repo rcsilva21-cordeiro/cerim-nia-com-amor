@@ -22,11 +22,11 @@ const ContactSection = () => {
 
           <div className="grid sm:grid-cols-2 gap-6 max-w-lg mx-auto mb-12">
             <a
-              href="mailto:contato@lovewedding.com.br"
+              href="mailto:contato@cordeirocelebracoes.com.br"
               className="flex items-center justify-center gap-3 bg-card rounded-xl p-5 border border-border/50 hover:border-primary/40 transition-colors group"
             >
               <Mail className="text-primary group-hover:text-primary/80" size={20} />
-              <span className="text-sm text-foreground">contato@lovewedding.com.br</span>
+              <span className="text-sm text-foreground">contato@cordeirocelebracoes.com.br</span>
             </a>
             <a
               href="tel:+5511999999999"
