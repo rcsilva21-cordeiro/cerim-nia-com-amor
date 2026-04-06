@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, MapPin, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import galleryCampoCover from "@/assets/gallery-campo-cover.jpg";
 
 const weddings = [
   {
