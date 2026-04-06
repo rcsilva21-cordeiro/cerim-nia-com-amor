@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, Mail, Phone, Instagram, MapPin } from "lucide-react";
+import { Heart, Phone, Instagram, MapPin } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -20,20 +20,13 @@ const ContactSection = () => {
             Adoraria ouvir a história de vocês e criar juntos uma cerimônia que seja a cara do amor de vocês.
           </p>
 
-          <div className="grid sm:grid-cols-2 gap-6 max-w-lg mx-auto mb-12">
+          <div className="flex justify-center mb-12">
             <a
-              href="mailto:contato@cordeirocelebracoes.com.br"
-              className="flex items-center justify-center gap-3 bg-card rounded-xl p-5 border border-border/50 hover:border-primary/40 transition-colors group"
-            >
-              <Mail className="text-primary group-hover:text-primary/80" size={20} />
-              <span className="text-sm text-foreground">contato@cordeirocelebracoes.com.br</span>
-            </a>
-            <a
-              href="tel:+5511999999999"
+              href="tel:+5511941124267"
               className="flex items-center justify-center gap-3 bg-card rounded-xl p-5 border border-border/50 hover:border-primary/40 transition-colors group"
             >
               <Phone className="text-primary group-hover:text-primary/80" size={20} />
-              <span className="text-sm text-foreground">(11) 99999-9999</span>
+              <span className="text-sm text-foreground">(11) 94112-4267</span>
             </a>
           </div>
 
@@ -53,7 +46,7 @@ const ContactSection = () => {
           </div>
 
           <a
-            href="https://wa.me/5511999999999"
+            href="https://wa.me/5511941124267"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-primary text-primary-foreground px-10 py-4 rounded-full font-body text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300"
