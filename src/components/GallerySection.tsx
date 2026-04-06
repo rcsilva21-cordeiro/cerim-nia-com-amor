@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, MapPin, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import galleryCampoCover from "@/assets/gallery-campo-cover.jpg";
+import galleryBeachSetup from "@/assets/gallery-beach-setup.jpg";
 
 const weddings = [
   {
