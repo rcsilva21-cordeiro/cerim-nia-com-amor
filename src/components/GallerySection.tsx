@@ -27,7 +27,7 @@ const weddings = [
       "https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?w=1024&q=80",
       "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1024&q=80",
       "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1024&q=80",
-      "https://images.unsplash.com/photo-1510076857177-7470076d4098?w=1024&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1024&q=80",
     ],
     title: "Casamento na Praia",
     location: "Praia ao pôr do sol",
