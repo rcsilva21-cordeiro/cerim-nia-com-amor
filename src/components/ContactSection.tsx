@@ -46,7 +46,7 @@ const ContactSection = () => {
           </div>
 
           <a
-            href="https://wa.me/5511999999999"
+            href="https://wa.me/5511941124267"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-primary text-primary-foreground px-10 py-4 rounded-full font-body text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300"
