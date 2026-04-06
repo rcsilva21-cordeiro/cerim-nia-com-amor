@@ -1,25 +1,35 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Heart, Quote } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
-const testimonials = [
-  {
-    quote: "Foi a cerimônia mais linda que já presenciamos. Cada palavra tocou nosso coração de uma forma que nunca vamos esquecer.",
-    names: "Ana & Beatriz",
-    detail: "Casamento na praia",
-  },
-  {
-    quote: "Ela conseguiu traduzir em palavras tudo o que sentíamos. Os convidados não pararam de chorar de emoção!",
-    names: "Carlos & Marina",
-    detail: "Cerimônia ao ar livre",
-  },
-  {
-    quote: "Uma celebrante que entende que o amor vai além de qualquer rótulo. Nossa cerimônia budista foi perfeita.",
-    names: "Rafael & Thiago",
-    detail: "Cerimônia na fazenda",
-  },
-];
+type Testimonial = {
+  id: string;
+  names: string;
+  detail: string | null;
+  quote: string;
+};
 
 const TestimonialsSection = () => {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetch = async () => {
+      const { data } = await supabase
+        .from("testimonials")
+        .select("id, names, detail, quote")
+        .eq("is_visible", true)
+        .order("created_at", { ascending: false });
+      if (data) setTestimonials(data);
+      setLoading(false);
+    };
+    fetch();
+  }, []);
+
+  if (loading) return null;
+  if (testimonials.length === 0) return null;
+
   return (
     <section id="depoimentos" className="py-24 md:py-32 bg-background">
       <div className="container max-w-6xl mx-auto px-6">
@@ -43,7 +53,7 @@ const TestimonialsSection = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, index) => (
             <motion.div
-              key={t.names}
+              key={t.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
