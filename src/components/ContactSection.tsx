@@ -39,7 +39,9 @@ const ContactSection = () => {
 
           <div className="flex items-center justify-center gap-6 mb-12">
             <a
-              href="#"
+              href="https://www.instagram.com/cordeiro.celebracoes/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-card border border-border/50 flex items-center justify-center hover:border-primary/40 transition-colors"
             >
               <Instagram className="text-primary" size={20} />
