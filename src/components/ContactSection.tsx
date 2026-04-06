@@ -20,13 +20,20 @@ const ContactSection = () => {
             Adoraria ouvir a história de vocês e criar juntos uma cerimônia que seja a cara do amor de vocês.
           </p>
 
-          <div className="flex justify-center mb-12">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <a
               href="tel:+5511941124267"
               className="flex items-center justify-center gap-3 bg-card rounded-xl p-5 border border-border/50 hover:border-primary/40 transition-colors group"
             >
               <Phone className="text-primary group-hover:text-primary/80" size={20} />
               <span className="text-sm text-foreground">(11) 94112-4267</span>
+            </a>
+            <a
+              href="mailto:cordeiro.celebracoes@gmail.com"
+              className="flex items-center justify-center gap-3 bg-card rounded-xl p-5 border border-border/50 hover:border-primary/40 transition-colors group"
+            >
+              <Mail className="text-primary group-hover:text-primary/80" size={20} />
+              <span className="text-sm text-foreground">cordeiro.celebracoes@gmail.com</span>
             </a>
           </div>
 
