@@ -38,12 +38,12 @@ const weddings = [
     },
   },
   {
-    cover: "https://images.unsplash.com/photo-1510070009289-b5bc29de0536?w=1024&q=80",
+    cover: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1024&q=80",
     photos: [
-      "https://images.unsplash.com/photo-1510070009289-b5bc29de0536?w=1024&q=80",
       "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1024&q=80",
       "https://images.unsplash.com/photo-1529636798458-92182e662485?w=1024&q=80",
       "https://images.unsplash.com/photo-1472653431158-6364773b2a56?w=1024&q=80",
+      "https://images.unsplash.com/photo-1470290378698-263fa7ca60ab?w=1024&q=80",
     ],
     title: "Celebração no Campo",
     location: "Fazenda com vista para o campo",
