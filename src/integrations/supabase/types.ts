@@ -14,7 +14,106 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      testimonials: {
+        Row: {
+          created_at: string
+          detail: string | null
+          id: string
+          is_visible: boolean | null
+          names: string
+          quote: string
+          wedding_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          detail?: string | null
+          id?: string
+          is_visible?: boolean | null
+          names: string
+          quote: string
+          wedding_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          detail?: string | null
+          id?: string
+          is_visible?: boolean | null
+          names?: string
+          quote?: string
+          wedding_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "testimonials_wedding_id_fkey"
+            columns: ["wedding_id"]
+            isOneToOne: false
+            referencedRelation: "weddings"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      wedding_photos: {
+        Row: {
+          created_at: string
+          id: string
+          order_index: number | null
+          photo_url: string
+          wedding_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          order_index?: number | null
+          photo_url: string
+          wedding_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          order_index?: number | null
+          photo_url?: string
+          wedding_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "wedding_photos_wedding_id_fkey"
+            columns: ["wedding_id"]
+            isOneToOne: false
+            referencedRelation: "weddings"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      weddings: {
+        Row: {
+          cover_url: string
+          created_at: string
+          description: string | null
+          id: string
+          location: string
+          order_index: number | null
+          title: string
+        }
+        Insert: {
+          cover_url: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          location: string
+          order_index?: number | null
+          title: string
+        }
+        Update: {
+          cover_url?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          location?: string
+          order_index?: number | null
+          title?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
