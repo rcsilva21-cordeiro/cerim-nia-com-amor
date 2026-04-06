@@ -42,8 +42,8 @@ const AboutSection = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Acredito que o amor não tem forma, cor ou crença. Celebro cerimônias para todos 
-              — sejam budistas, ateus ou membros da comunidade LGBTQI+ — sempre com respeito, 
-              inclusão e muito carinho.
+              os casais, independente de religião ou estilo de vida — sempre com respeito, 
+              acolhimento e muito carinho.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Cada cerimônia é cuidadosamente personalizada para refletir a história única 

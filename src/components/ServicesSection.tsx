@@ -15,7 +15,7 @@ const mainServices = [
   {
     icon: BookOpen,
     title: "Cerimônia Espiritual",
-    description: "Para casais que buscam conexão espiritual sem vínculo religioso — budista, holística ou ecumênica.",
+    description: "Para casais que buscam uma conexão espiritual personalizada, sem vínculo com uma religião específica.",
   },
 ];
 

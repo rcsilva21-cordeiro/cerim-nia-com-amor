@@ -38,7 +38,7 @@ const Navbar = () => {
               scrolled ? "text-foreground" : "text-primary-foreground"
             }`}
           >
-            LoveWedding
+            Cordeiro Celebrações
           </span>
         </a>
 
